@@ -18,6 +18,23 @@ function switch_theme(){
 }
 
 
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    
+    switch_theme();
+    
+
+    burger.addEventListener('click',() => {nav.classList.toggle('nav-active');
+});
+};
+
+//const app = ()=>{
+//    navSlide();
+//};
+
+navSlide();
+
 //function dark_theme(){
 //    document.addEventListener("DOMContentLoaded",function(event) {
 //        document.documentElement.setAttribute("data-theme","dark");
