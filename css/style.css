@@ -27,10 +27,12 @@ body {
     list-style: none;
 }
 nav{
+    
     height: 80px;
     width: 100%;
     background: #080C12;
     color: #eae0c8;
+/*    display: flex;*/
 }
 
 label.logo{
@@ -43,7 +45,8 @@ label.logo{
 
 nav ul{
     float: right;
-    margin-right: 40px;
+/*    margin-right: 40px;*/
+
 }
 
 nav li{
@@ -67,3 +70,48 @@ a.active,a:hover{
 }
 
 /*https://www.w3schools.com/icons/fontawesome5_intro.asp*/
+
+.burger{
+    display: none;
+/*    right:5%;*/
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:azure;
+    margin: 5px;
+}
+
+
+
+@media screen and (max-width:1250px)
+{
+    body{
+        overflow-x: hidden;
+    }
+/*    nav a{
+        display: flex;
+        justify-content: space-around;
+        width:20%;
+    }
+    */
+    nav ul{
+        position:absolute;
+        right: 0px;
+        height: 100%;
+        background: #080C12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+    }
+    
+    nav li{
+        opacity:0;
+    }
+    .burger{
+        display: block;
+    }
+}
