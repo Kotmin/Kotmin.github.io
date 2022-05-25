@@ -2,7 +2,7 @@
 
 <html lang="pl">
 <head>
-<title>Szybki kurs HTML</title>
+<title>Remember to give me 5 mark</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--że tu? viewport odpowiada za zoomowanie na ekranach dotykowych, chociaż znając życie ctrl + --> 
@@ -20,11 +20,23 @@
                 <li><a href="#"> Home</a></li>
                 <li><a href="#"> News</a></li>
                 <li><a href="#"> Remember something</a></li>
-                <li><a href="#"> Theme</a></li>
+<!--                <li><a href="#"> Theme</a></li>-->
 <!--                <li><a href="#"> Lang</a></li>
                 <li><a href="#"> SubMenu</a></li>-->
                 
             </ul>
+        <div class="theme_toogle">
+            <!--<input type="checkbox" class="checkbox_swype" id="night_theme_toogle" aria-hidden="true" onclick="switch_theme()" >-->
+            <input type="checkbox" class="checkbox_swype" id="night_theme_toogle" aria-hidden="true" >
+            <label for="night_theme_toogle" class="label_toogle">
+                <i class="sun"></i>
+                <i class="moon"></i>
+                
+                <i class="ball"></i>
+<!--                <div class="ball"></div>-->
+            </label>
+        </div>
+            
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -35,15 +47,7 @@
         <div>TODO write content</div>
 <!--        <button onclick="switch_theme()"> Zmien tryb</button>-->
         
-        <div class="theme_toogle">
-            <input type="checkbox" class="checkbox_swype" id="night_theme_toogle" aria-hidden="true" onclick="switch_theme()" >
-            <label for="night_theme_toogle" class="label_toogle">
-                <i class="moon"></i>
-                <i class="sun"></i>
-                <i class="ball"></i>
-<!--                <div class="ball"></div>-->
-            </label>
-        </div>
+
         
         
         <script src="js_scripts/functions.js"></script>
