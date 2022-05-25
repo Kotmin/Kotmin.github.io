@@ -17,4 +17,53 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: motserrat;
 }
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: #080C12;
+    color: #eae0c8;
+}
+
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+
+nav li{
+    display: inline-block;
+    margin:0 8px;
+    line-height: 80px;
+}
+
+nav a{
+    color:white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+a.active,a:hover{
+    border: 1px solid whitesmoke;
+    transition: .5s;
+}
+
+/*https://www.w3schools.com/icons/fontawesome5_intro.asp*/
