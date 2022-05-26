@@ -235,6 +235,7 @@ section{
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
+    padding:2rem;
 }
 
 .container > *{
@@ -337,6 +338,7 @@ section{
 
 .choice-text{
     padding: 1.5rem;
+    width: 100%;
 }
 
 
