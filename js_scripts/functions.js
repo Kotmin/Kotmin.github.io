@@ -27,6 +27,7 @@ const disableDarkMode = () => {
 
 if (darkMode === "enabled") {
   enableDarkMode(); // set state of darkMode on page load
+  
 }
 
 toggleBtn.addEventListener("click", (e) => {
@@ -38,55 +39,6 @@ toggleBtn.addEventListener("click", (e) => {
   }
 });
 
-//function switch_theme(){
-//darkMode = localStorage.getItem("dark"); // update darkMode when clicked
-//  if (darkMode === "disabled") {
-//    enableDarkMode();
-//  } else {
-//    disableDarkMode();
-//  }
-//}
-
-
-
-
-//Here is the end of copypasterinio
-//
-//
-//
-//function dark_theme(){
-//    document.documentElement.setAttribute("data-theme","dark");
-//}
-//
-//function light_theme(){
-//    document.documentElement.setAttribute("data-theme","light");
-//}
-//
-//
-//
-//function switch_theme(){
-//    var currentTheme = document.documentElement.getAttribute("data-theme");
-//    var switchToTheme = currentTheme === "dark" ? "light" : "dark" ;
-//    
-//    document.documentElement.setAttribute("data-theme",switchToTheme);
-//    
-//    
-//}
-//
-//function set_proper_theme(){
-//    const currentTheme = document.documentElement.getAttribute("data-theme");
-//    const currSwitchPosition=document.document.getElementbyId("night_theme_toogle");
-//    if(currentTheme === "dark")
-//    {
-//        document.documentElement.setAttribute("data-theme","light");
-//        currSwitchPosition.prop('checked',false);
-//    }
-//    else{
-//        currSwitchPosition.prop('checked',true);
-//    }
-//    
-//    
-//}
 
 
 const navSlide = () => {
