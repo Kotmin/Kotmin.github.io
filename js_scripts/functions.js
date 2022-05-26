@@ -257,7 +257,34 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
+//        console.log(selectedAnswer == currentQuestion.answer);
+          const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+          
+//          sypnie bledem czy nie sypnie?
+          
+          
+          selectedChoice.parentElement.classList.add(classToApply);
+          
+          
+        setTimeout(function() {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+                        //your code to be executed after 1 second
+            }, delayInMilliseconds);
+          
+          
+         
+          
+          
+//        const classToApply = 'incorrect';
+//        if (selectedAnswer == currentQuestion.answer) {
+//            classToApply = 'correct';
+//        }
+//        
+//        
+        
+        
+        
     });
 });
 
