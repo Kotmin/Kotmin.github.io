@@ -210,6 +210,21 @@ a.active,a:hover{
 }
 
 
+section{
+    
+    display: flex;
+    /*Tutaj trzeba looknac czy nie potrzebujemy jeszcze rozmiarow dopisac*/
+    width: 100vw;
+    height: 92vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+
+
+}
+
+
 /*Util*/
 .container{
     display: flex;
@@ -282,6 +297,47 @@ a.active,a:hover{
 
 /*End of buttons*/
 
+
+
+
+/*Quiz game*/
+
+
+.choice-container{
+    display:flex;
+    margin-bottom:0.5rem;
+    width: 100vh;
+    font-size: 1.8rem;
+    border: 0.1rem solid var(--text-color);
+    /*znajac zycie tutaj mozemy jakos to rozjasnic/przyciemnic trzeba poczytac*/
+    background-color: var(--background-color);
+    
+}
+
+
+.choice-container:hover {
+    cursor:pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #808080;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    
+}
+
+
+.choice-prefix{
+    padding:1.5rem 2.5rem;
+    /*1.5 na dole i 2.5 po bokach*/
+    /*tutaj tez bedziemy dodawali obrys kolorystyczny*/
+    
+    background-color: #080C12;
+    /*color: var(--background-color);*/
+    color: aliceblue;
+    
+}
+
+.choice-text{
+    padding: 1.5rem;
+}
 
 
 /*Media start*/

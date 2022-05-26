@@ -79,6 +79,8 @@ function show(id) {
     switch(id)
     {
         case 2: text += showQuizStartPage();break;
+        
+        case 3: text += showGamePage();break;
             
         default: text+= showStartPage();break;
     }
@@ -99,12 +101,51 @@ function showQuizStartPage(){
     text+='        <div class="container">'+
             '<div class="quizdiv flex-center flex-column">'+
                 '<h1>Quick Quiz</h1>'+
-                '<a class="btn" href="game.html"> Play </a>'+
+                '<a class="btn" href="#" onclick="show(3)" > Play </a>'+
                 '<a class="btn" href="highscores.html"> High Score </a>'+
 
 
             '</div>'+
-        '</div>"';
+        '</div>';
+    
+    return text;
+}
+
+
+function showGamePage(){
+    var text="";
+    
+    text+= `
+<div class="container>
+        <div id="game" class="guizdiv justify-center flex-column">
+            <h2 id="question"> What is the answer to this questions?</h2>
+    
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1" > Choice 1 </p>
+            </div>
+    
+           <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2"> Choice 2 </p>
+            </div>
+    
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3" > Choice 3 </p>
+            </div>
+    
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4" > Choice 4 </p>
+            </div>
+    
+    
+    
+        </div>
+    </div>
+    
+`;
     
     return text;
 }
