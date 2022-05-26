@@ -73,16 +73,46 @@ const navSlide = () => {
 
 navSlide();
 
+function show(id) {
+    var text="";
+    
+    switch(id)
+    {
+        case 2: text += showQuizStartPage();break;
+            
+        default: text+= showStartPage();break;
+    }
+    
+    document.getElementById("content").innerHTML = text;
+}
+
+
+function showStartPage(){
+    var text="";
+    return text;
+}
+
+
+function showQuizStartPage(){
+    var text="";
+    
+    text+='        <div class="container">'+
+            '<div class="quizdiv flex-center flex-column">'+
+                '<h1>Quick Quiz</h1>'+
+                '<a class="btn" href="game.html"> Play </a>'+
+                '<a class="btn" href="highscores.html"> High Score </a>'+
+
+
+            '</div>'+
+        '</div>"';
+    
+    return text;
+}
+
+
 //const app = ()=>{
     
 //};
 
 //navSlide();
-
-//function dark_theme(){
-//    document.addEventListener("DOMContentLoaded",function(event) {
-//        document.documentElement.setAttribute("data-theme","dark");
-//    });
-//}
-
 

@@ -13,13 +13,13 @@
 
 </head>
 
-    <body>
+    <body onload="show(0)" >
         <nav>
-            <label class="logo">Memo.me</label>
+            <label class="logo" onclick="show(0)">Memo.me</label>
             <ul class="nav-links">
                 <li><a href="#"> Home</a></li>
                 <li><a href="#"> News</a></li>
-                <li><a href="#"> Remember something</a></li>
+                <li><a href="#" onclick="show(2)"> Remember something</a></li>
 
 
             </ul>
@@ -43,11 +43,14 @@
 
         </nav>
       
+        <section id="content">
+            <h2 aria-hidden="true">Missing section</h2>
+            
+        </section>
         
         
         
-        
-        <div class="container">
+<!--        <div class="container">
             <div class="quizdiv flex-center flex-column">
                 <h1>Quick Quiz</h1>
                 <a class="btn" href="game.html"> Play </a>
@@ -55,7 +58,7 @@
 
 
             </div>
-        </div>
+        </div>-->
 
         
 
