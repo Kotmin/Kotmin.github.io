@@ -94,6 +94,13 @@ function show(id) {
                 
             
             break;
+        case 4: text += showEndGamePage();
+                    setTimeout(function() {
+                runEndofQuizGame();
+  //your code to be executed after 1 second
+}, delayInMilliseconds);
+
+            break;
             
         default: text+= showStartPage();break;
     }
@@ -115,7 +122,10 @@ function showQuizStartPage(){
             '<div class="quizdiv flex-center flex-column">'+
                 '<h1>Quick Quiz</h1>'+
                 '<a class="btn" href="#" onclick="show(3)" > Play </a>'+
-                '<a class="btn" href="highscores.html"> High Score </a>'+
+                '<a class="btn" href="#"> High Score </a>'+
+
+//                    '<button class="btn" onclick="show(3)" > Play </a>'+
+//                    '<button class="btn" > High Score </a>'+
 
 
             '</div>'+
@@ -130,7 +140,7 @@ function showGamePage(){
     
     text+= `
 <div class="container">
-        <div id="game" class="guizdiv justify-center flex-column">
+        <div id="game" class="quizdiv justify-center flex-column">
             <div id="hud">
                 <div id="hud-item">
                     <p class="hud-prefix">
@@ -185,6 +195,67 @@ function showGamePage(){
     
     return text;
 }
+
+
+function showEndGamePage(){
+    var text="";
+    
+    text+= `
+<div class="container">
+      <div id="end" class="quizdiv flex-center flex-column">
+        <h1 id="finalScore"></h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
+        <a class="btn" href="/game.html">Play Again</a>
+        <a class="btn" href="/">Go Home</a>
+      </div>
+    </div>
+`;
+    
+    return text;
+}
+
+
+runEndofQuizGame = () => {
+const username = document.getElementById('username');
+const saveScoreBtn= document.getElementById('saveScoreBtn');
+
+
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+finalScore.innerText = mostRecentScore;
+
+
+username.addEventListener("keyup", () => {
+    console.log(username.value);
+    saveScoreBtn.disabled = !username.value;
+});
+
+
+saveHighScore= e => {
+    e.preventDefault();
+};
+    
+};
+
+
+
+
 
 
 //Util
@@ -258,8 +329,12 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        return window.location.assign('/end.html');
+//        return window.location.assign('/end.html');
 //        tu jest zakonczenie quizu
+//            showEndGamePage();
+            localStorage.setItem("mostRecentScore",score);
+            show(4);
+            return;
     }
     questionCounter++;
 //    questionCounterText.innerText = questionCounter+ "/" + MAX_QUESTIONS;
