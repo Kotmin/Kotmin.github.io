@@ -101,6 +101,16 @@ function show(id) {
 }, delayInMilliseconds);
 
             break;
+        case 5: text += showHighScores();
+            
+            
+                setTimeout(function() {
+                              runQuizHighScores();
+               //your code to be executed after 1 second
+             }, delayInMilliseconds);
+            
+            
+        break;
             
         default: text+= showStartPage();break;
     }
@@ -122,7 +132,7 @@ function showQuizStartPage(){
             '<div class="quizdiv flex-center flex-column">'+
                 '<h1>Quick Quiz</h1>'+
                 '<a class="btn" href="#" onclick="show(3)" > Play </a>'+
-                '<a class="btn" href="#"> High Score </a>'+
+                '<a class="btn" href="#" onclick="show(5)"> High Score </a>'+
 
 //                    '<button class="btn" onclick="show(3)" > Play </a>'+
 //                    '<button class="btn" > High Score </a>'+
@@ -221,8 +231,25 @@ function showEndGamePage(){
             Save
           </button>
         </form>
-        <a class="btn" onclick="show(2);"  href="#">Play Again</a>
-        <a class="btn" href="#">Go Home</a>
+        <a class="btn" onclick="show(3);"  href="#">Play Again</a>
+        <a class="btn" href="#" onclick="show(2)">Go Home</a>
+      </div>
+    </div>
+`;
+    
+    return text;
+}
+
+
+function showHighScores(){
+    var text="";
+    
+    text+= `
+<div class="container">
+      <div id="highScores" class="quizdiv flex-center flex-column">
+        <h1 id="finalScore">High Scores</h1>
+        <ul id="highScoresList"></ul>
+        <a class="btn" href="#" onclick="show(2)">Go Home</a>
       </div>
     </div>
 `;
@@ -444,5 +471,19 @@ startGame();
 };
 
 
+runQuizHighScores = () => {
+    const highScoresList = document.getElementById("highScoresList");
+    const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    
+    
+    highScoresList.innerHTML = highScores.map(
+            score => {
+                return `<li class="high-score">${score.name} - ${score.score}</li>`;
+            }).join("");
+    
+    
+    
+    
+};
 
 
