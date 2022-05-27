@@ -221,8 +221,8 @@ function showEndGamePage(){
             Save
           </button>
         </form>
-        <a class="btn" href="/game.html">Play Again</a>
-        <a class="btn" href="/">Go Home</a>
+        <a class="btn" onclick="show(2);"  href="#">Play Again</a>
+        <a class="btn" href="#">Go Home</a>
       </div>
     </div>
 `;
@@ -238,7 +238,27 @@ const saveScoreBtn= document.getElementById('saveScoreBtn');
 
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+
+
+
+//localStorage.setItem("highScores",JSON.stringify([]));
+//console.log(JSON.parse(localStorage.getItem("highScores")));
+
+
+const MAX_HIGH_SCORES = 5;
+
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+
+
 finalScore.innerText = mostRecentScore;
+
+
+
+
+
+
+
 
 
 username.addEventListener("keyup", () => {
@@ -249,6 +269,30 @@ username.addEventListener("keyup", () => {
 
 saveHighScore= e => {
     e.preventDefault();
+    
+    
+    const score =  {
+        score: mostRecentScore,
+        name: username.value
+            
+    };
+    highScores.push(score);
+    
+    
+    highScores.sort((a,b) => b.score - a.score);
+//        If b is bigger than a, put b before a 
+    highScores.splice(MAX_HIGH_SCORES);
+    
+    
+    
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    
+//    window.location.assign("/"); like goto root site
+            show(2);
+
+//UTIL
+//    console.log(highScores);
+    
 };
     
 };
