@@ -123,10 +123,10 @@ function showStartPage(){
     var text="";
     
     text+= `
-        <div class="container">
+        <div class="container fade-in">
             <div class="spinning-sphere"> </div>
             <div class="quizdiv flex-center flex-column">
-                <h1 class="right-alligner"> Gamification in serve of science</h1>
+                <h1 class="right-alligner"> Gamification in serve of learning</h1>
                 <a class="btn" href="#" onclick="" > Learn more </a>
             </div>
             </div>
@@ -143,7 +143,7 @@ function showQuizStartPage(){
     var text="";
     
     text+='        <div class="container">'+
-            '<div class="quizdiv flex-center flex-column">'+
+            '<div class="quizdiv flex-center flex-column fade-in">'+
                 '<h1>Quick Quiz</h1>'+
                 '<a class="btn" href="#" onclick="show(3)" > Play </a>'+
                 '<a class="btn" href="#" onclick="show(5)"> High Score </a>'+
