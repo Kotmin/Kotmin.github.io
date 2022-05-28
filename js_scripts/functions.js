@@ -214,7 +214,8 @@ function showEndGamePage(){
     text+= `
 <div class="container">
       <div id="end" class="quizdiv flex-center flex-column">
-        <h1 id="finalScore"></h1>
+        <h1>Your Score</h1>
+        <h2 id="finalScore"></h2>
         <form>
           <input
             type="text"
@@ -247,7 +248,8 @@ function showHighScores(){
     
     text+= `
 <div class="container">
-      <div id="highScores" class="quizdiv flex-center flex-column">
+    <div id="loader"></div>
+      <div id="highScores" class="quizdiv flex-center flex-column hidden">
         <h1 id="finalScore">High Scores</h1>
         <ul id="highScoresList"></ul>
         <a class="btn" href="#" onclick="show(2)">Go Home</a>
@@ -496,13 +498,17 @@ runQuizHighScores = () => {
     const highScoresList = document.getElementById("highScoresList");
     const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     
+    const loader = document.getElementById('loader');
+    const highs = document.getElementById('highScores');
+    
     
     highScoresList.innerHTML = highScores.map(
             score => {
                 return `<li class="high-score">${score.name} - ${score.score}</li>`;
             }).join("");
     
-    
+    highs.classList.remove("hidden");
+    loader.classList.add('hidden');
     
     
 };
