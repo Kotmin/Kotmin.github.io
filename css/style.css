@@ -272,6 +272,33 @@ section{
     /*Chociaz tutaj by sie czlowiek mogl zastanowic czy to jest potrzebne*/
 }
 
+/*LOADER*/
+
+/*    border: 1.6rem solid #aaa;
+    border-radius: 50%;
+    border-top: 1.6rem solid darkslategrey;*/
+
+
+#loader {
+  border: 1.6rem solid #aaa;
+  border-radius: 50%;
+  border-top: 1.6rem solid darkslategrey;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 /*Buttons*/
 
 .btn {

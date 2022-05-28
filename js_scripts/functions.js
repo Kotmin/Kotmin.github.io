@@ -150,7 +150,8 @@ function showGamePage(){
     
     text+= `
 <div class="container">
-        <div id="game" class="quizdiv justify-center flex-column">
+    <div id="loader"></div>
+        <div id="game" class="quizdiv justify-center flex-column hidden">
             <div id="hud">
                 <div id="hud-item">
                     <p class="hud-prefix">
@@ -349,6 +350,9 @@ runQuizGame = () => {
     const choices = Array.from(document.getElementsByClassName('choice-text'));
     const questionCounterText= document.getElementById('questionCounter');
     const scoreText = document.getElementById('score');
+    
+    const loader = document.getElementById('loader');
+    const game = document.getElementById('game');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -391,6 +395,7 @@ fetch
         return formattedQuestion;
     });
 //    questions = loadedQuestions;
+
     startGame();
     
 })
@@ -409,6 +414,8 @@ startGame = () => {
     availableQuesions = [...questions];
 //    operator rozdzielenia
     getNewQuestion();
+    game.classList.remove("hidden");
+    loader.classList.add('hidden');
 };
 
 getNewQuestion = () => {
