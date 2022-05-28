@@ -230,13 +230,15 @@ function showEndGamePage(){
       <div id="end" class="quizdiv flex-center flex-column">
         <h1>Your Score</h1>
         <h2 id="finalScore"></h2>
-        <form>
+        <form onsubmit="validateFinalScore()">
           <input
             type="text"
             name="username"
             id="username"
             placeholder="username"
-          />
+            autocomplete="on" 
+            pattern="[a-zA-Z0-9.-_]"
+          required>
           <button
             type="submit"
             class="btn"
@@ -275,6 +277,9 @@ function showHighScores(){
 }
 
 
+
+
+
 runEndofQuizGame = () => {
 const username = document.getElementById('username');
 const saveScoreBtn= document.getElementById('saveScoreBtn');
@@ -306,9 +311,25 @@ finalScore.innerText = mostRecentScore;
 
 
 username.addEventListener("keyup", () => {
-    console.log(username.value);
+//    console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 });
+
+
+
+validateFinalScore = () =>{
+    var user= document.getElementById('username').value;
+    var regex = /^[a-zA-Z0-9@$]{1,40}$/;
+//    console.log("Hello");
+//    console.log(`${user}`);
+    if(!regex.test(user)){
+        alert("Unproper username!!!");
+        return false;
+    }
+    
+    return true;
+};
+
 
 
 saveHighScore= e => {
@@ -320,6 +341,9 @@ saveHighScore= e => {
         name: username.value
             
     };
+    if(validateFinalScore()){
+        
+    
     highScores.push(score);
     
     
@@ -336,7 +360,7 @@ saveHighScore= e => {
 
 //UTIL
 //    console.log(highScores);
-    
+    }
 };
     
 };
