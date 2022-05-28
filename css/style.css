@@ -186,11 +186,16 @@ a.active,a:hover{
     width:300px;
     height:300px;
     border: 7px dotted var(--text-color);
+    
+/*    width:30rem;
+    height:30rem;
+    border: 0.5rem dotted var(--text-color);
+    */
     border-radius: 50%;
     animation: spin-sphere 15s linear infinite;
     position: relative;
     transform-style: preserve-3d;
-    /*-ms-transform-style: none;*/ 
+    
     
 }
 
@@ -198,6 +203,12 @@ a.active,a:hover{
     width:300px;
     height:300px;
     border: 5px dotted var(--text-color);
+    
+    
+/*    width:30rem;
+    height:30rem;
+    border: 0.5rem dotted var(--text-color);
+    */
     border-radius: 50%;
     content: "";
     left:0;
@@ -211,6 +222,10 @@ a.active,a:hover{
 
 .spinning-sphere::after{
     transform: rotateX(66.6deg);
+}
+
+.right-alligner{
+    text-align: right;
 }
 
 @keyframes spin-sphere{
@@ -544,6 +559,11 @@ input::placeholder {
     .burger{
         display: block;
     }
+    .right-alligner{
+    text-align: center;
+    }
+    
+    
 }
 
 
@@ -552,6 +572,9 @@ input::placeholder {
     .nav-links{
         width: 100%;
     }
+    .right-alligner{
+    text-align: center;
+}
 }
 
 

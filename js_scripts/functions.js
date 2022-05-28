@@ -126,7 +126,7 @@ function showStartPage(){
         <div class="container">
             <div class="spinning-sphere"> </div>
             <div class="quizdiv flex-center flex-column">
-                <h1> Gamification in serve of science</h1>
+                <h1 class="right-alligner"> Gamification in serve of science</h1>
                 <a class="btn" href="#" onclick="" > Learn more </a>
             </div>
             </div>
