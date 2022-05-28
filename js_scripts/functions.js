@@ -121,6 +121,20 @@ function show(id) {
 
 function showStartPage(){
     var text="";
+    
+    text+= `
+        <div class="container">
+            <div class="spinning-sphere"> </div>
+            <div class="quizdiv flex-center flex-column">
+                <h1> Gamification in serve of science</h1>
+                <a class="btn" href="#" onclick="" > Learn more </a>
+            </div>
+            </div>
+    
+`;
+    
+    
+    
     return text;
 }
 

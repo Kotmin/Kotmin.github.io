@@ -177,6 +177,51 @@ a.active,a:hover{
     transition: transform .5s ease-in; 
 }*/
 
+
+
+/*Animated homepage*/
+
+.spinning-sphere{
+    width:300px;
+    height:300px;
+    border: 7px dotted var(--text-color);
+    border-radius: 50%;
+    animation: spin-sphere 15s linear infinite;
+    position: relative;
+    transform-style: preserve-3d;
+    -ms-transform-style: none; 
+    
+}
+
+.spinning-sphere::before, .spinning-sphere::after{
+    width:300px;
+    height:300px;
+    border: 7px dotted var(--text-color);
+    border-radius: 50%;
+    content: "";
+    left:0;
+    top:0;
+    position: absolute;
+}
+
+.spinning-sphere::before{
+    transform: rotateX(-66.6deg);
+}
+
+.spinning-sphere::after{
+    transform: rotateX(66.6deg);
+}
+
+@keyframes spin-sphere{
+    0%{
+        transform: rotateY(1deg) rotateX(1deg) rotateZ(1deg);
+    }
+    100%{
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    }
+    
+}
+
 /*Start quizAppCode*/
 
 .quizdiv h1,h2,h3,h4,h5,h6{
