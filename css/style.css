@@ -214,6 +214,42 @@ a.active,a:hover{
     
 }
 
+
+
+/*Article content*/
+
+article{
+    font-size: 1.8rem;
+    text-align: justify;
+    text-justify: inter-word;
+    
+
+
+}
+
+article h1{
+    font-size: 4.2rem;
+    text-align: left;
+    margin-bottom: 1.4rem;
+}
+
+
+    
+article h2,h3,h4,h5,h6{
+    font-size: 2.8rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-justify: auto;
+    
+   }
+
+img{
+        max-width: 100%;
+        height: auto; 
+        margin-bottom: 1rem;
+}
+
+
 /*Start quizAppCode*/
 
 .quizdiv h1,h2,h3,h4,h5,h6{
@@ -269,10 +305,14 @@ section{
     max-width: 80rem;
     margin: 0 auto;
     padding:2rem;
-    
+        
     
 
     
+}
+
+.overflow_hidden{
+    overflow: hidden;
 }
 
 .container > *{

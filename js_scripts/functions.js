@@ -126,7 +126,7 @@ function showStartPage(){
     var text="";
     
     text+= `
-        <div class="container fade-in">
+        <div class="container fade-in overflow_hidden">
             <div class="spinning-sphere"> </div>
             <div class="quizdiv flex-center flex-column">
                 <h1 class="right-alligner"> Gamification in serve of learning</h1>
@@ -142,15 +142,44 @@ function showStartPage(){
 }
 
 
+function showWorkInProggressPage(){
+    var text="";
+    
+    text+= `
+        <div class="quizdiv container fade-in overflow_hidden">
+            <div class=" flex-center flex-column">
+                <h1> Work in progress</h1>
+ 
+                <a class="btn" href="#" onclick="show(3)" > Try now </a>
+            </div>
+            </div>
+    
+`;
+    
+    
+    
+    return text;
+}
+
+//img on licence https://www.pexels.com/photo/woman-about-to-write-on-paper-574285/
+
 function showLearnMorePage(){
     var text="";
     
     text+= `
-        <div class="container fade-in">
-            <div class="quizdiv flex-center flex-column">
-                <h1> Work in progress</h1>
- 
-                <a class="btn" href="#" onclick="show(3)" > Try now </a>
+        <div class="container fade-in overflow_hidden">
+            <div class="flex-center flex-column ">
+                
+                <article>
+                <h1> Gamification does it work?</h1>
+                <img src="src/img/pexels-tirachard-kumtanom-574285.jpg" alt="A girl studying with a sheet of paper and a laptop"/>
+ I think we all agree that somehow it is so easy for us to play a mobile game than a quantum physics textbook. In the field of chemistry known as chemical kinetics, the concept of this notion of how energy will be. It is about energy, which lends itself to whether the chemical activity takes place successfully or not. Are you starting to understand? </article>
+               
+            </article>
+            
+
+            
+                <a class="btn" href="#" onclick="show(3)" > Try it yourself </a>
             </div>
             </div>
     
