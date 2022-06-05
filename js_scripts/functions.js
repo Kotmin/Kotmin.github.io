@@ -262,6 +262,16 @@ function showEndGamePage(){
             autocomplete="on" 
             pattern="[a-zA-Z0-9.-_]"
           required>
+    
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            autocomplete="on" 
+            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+          required>
+    
           <button
             type="submit"
             class="btn"
@@ -307,6 +317,8 @@ runEndofQuizGame = () => {
 const username = document.getElementById('username');
 const saveScoreBtn= document.getElementById('saveScoreBtn');
 
+const email = document.getElementById('email');
+
 
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
@@ -335,7 +347,7 @@ finalScore.innerText = mostRecentScore;
 
 username.addEventListener("keyup", (e) => {
 
-    saveScoreBtn.disabled = !username.value;
+    saveScoreBtn.disabled = !username.value && !email.value;
     
 });
 
@@ -344,10 +356,17 @@ username.addEventListener("keyup", (e) => {
 validateFinalScore = () =>{
     var user= document.getElementById('username').value;
     var regex = /^[a-zA-Z0-9@$]{1,40}$/;
+    
+    var email=document.getElementById('email').value;
+    var regex2 = /[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}/;
 //    console.log("Hello");
 //    console.log(`${user}`);
     if(!regex.test(user)){
         alert("Unproper username!!!");
+        return false;
+    }
+    if(!regex2.test(email)){
+        alert("Unproper e-mail address!!!");
         return false;
     }
     
@@ -362,7 +381,8 @@ saveHighScore= e => {
     
     const score =  {
         score: mostRecentScore,
-        name: username.value
+        name: username.value,
+        email: email.value
             
     };
     if(validateFinalScore()){
@@ -459,7 +479,7 @@ fetch
         return formattedQuestion;
     });
 //    questions = loadedQuestions;
-
+//pozostalosc po pobieraniu pytan z lokalnego pliku zmieniajac dwie linijki, a wlasciwie odkomentowujac je mozemy powrocic do tego stanu
     startGame();
     
 })
