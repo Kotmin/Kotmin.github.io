@@ -111,6 +111,9 @@ function show(id) {
             
             
         break;
+        
+        case 6: text +=showLearnMorePage();
+        break;
             
         default: text+= showStartPage();break;
     }
@@ -127,7 +130,27 @@ function showStartPage(){
             <div class="spinning-sphere"> </div>
             <div class="quizdiv flex-center flex-column">
                 <h1 class="right-alligner"> Gamification in serve of learning</h1>
-                <a class="btn" href="#" onclick="" > Learn more </a>
+                <a class="btn" href="#" onclick="show(6)" > Learn more </a>
+            </div>
+            </div>
+    
+`;
+    
+    
+    
+    return text;
+}
+
+
+function showLearnMorePage(){
+    var text="";
+    
+    text+= `
+        <div class="container fade-in">
+            <div class="quizdiv flex-center flex-column">
+                <h1> Work in progress</h1>
+ 
+                <a class="btn" href="#" onclick="show(3)" > Try now </a>
             </div>
             </div>
     
@@ -310,9 +333,10 @@ finalScore.innerText = mostRecentScore;
 
 
 
-username.addEventListener("keyup", () => {
-//    console.log(username.value);
+username.addEventListener("keyup", (e) => {
+
     saveScoreBtn.disabled = !username.value;
+    
 });
 
 
@@ -552,3 +576,4 @@ runQuizHighScores = () => {
 };
 
 
+//overflow hidden w css

@@ -41,7 +41,6 @@ nav{
     min-height: 8vh;
     
     
-/*    width: 100%;*/
     background: #080C12;
     color: #eae0c8;
     
@@ -55,8 +54,6 @@ label.logo{
     font-size: 35px;
     font-weight: bold;
     color: whitesmoke;
-/*    padding: 0 100px;*/
-/*    line-height: 80px;*/
 }
 
 
@@ -98,7 +95,7 @@ label.logo{
 
 
 .sun {
-    /*display: flex;*/
+    
     background: #f1c40f;
     
     border-radius: 50%;
@@ -128,11 +125,6 @@ label.logo{
 .nav-links{
     display: flex;
     justify-content: space-around;
-/*    width: 30%;*/
-/*    float: right;*/
-    
-/*    margin-right: 40px;*/
-
 }
 
 .nav-links li{
@@ -146,7 +138,6 @@ label.logo{
     font-size: 18px;
     text-transform: uppercase;
     border: 1px solid transparent;
-/*    padding: 7px 10px;*/
     border-radius: 3px;
 }
 
@@ -173,10 +164,6 @@ a.active,a:hover{
 
 /*End of navbar*/
 
-/*section{
-    transition: transform .5s ease-in; 
-}*/
-
 
 
 /*Animated homepage*/
@@ -186,11 +173,6 @@ a.active,a:hover{
     width:300px;
     height:300px;
     border: 7px dotted var(--text-color);
-    
-/*    width:30rem;
-    height:30rem;
-    border: 0.5rem dotted var(--text-color);
-    */
     border-radius: 50%;
     animation: spin-sphere 15s linear infinite;
     position: relative;
@@ -203,12 +185,6 @@ a.active,a:hover{
     width:300px;
     height:300px;
     border: 5px dotted var(--text-color);
-    
-    
-/*    width:30rem;
-    height:30rem;
-    border: 0.5rem dotted var(--text-color);
-    */
     border-radius: 50%;
     content: "";
     left:0;
@@ -252,7 +228,6 @@ a.active,a:hover{
 .quizdiv h1 > span{
     font-size:2.4rem;
     font-weight: 500;
-    /*margin-bottom: 5rem;*/
 }
 
 
@@ -265,7 +240,6 @@ a.active,a:hover{
 
 .quizdiv h3{
     font-size:2.8rem;
-    /*margin-bottom: 5rem;*/
     font-weight: 500;
 }
 
@@ -273,7 +247,6 @@ a.active,a:hover{
 section{
     
     display: flex;
-    /*Tutaj trzeba looknac czy nie potrzebujemy jeszcze rozmiarow dopisac*/
     width: 100vw;
     height: 92vh;
     justify-content: center;
@@ -298,9 +271,7 @@ section{
     padding:2rem;
     
     
-    form{
-        
-    }
+
     
 }
 
@@ -330,15 +301,9 @@ section{
 
 .hidden {
     display: none;
-    /*Chociaz tutaj by sie czlowiek mogl zastanowic czy to jest potrzebne*/
 }
 
 /*LOADER*/
-
-/*    border: 1.6rem solid #aaa;
-    border-radius: 50%;
-    border-top: 1.6rem solid darkslategrey;*/
-
 
 #loader {
   border: 1.6rem solid #aaa;
@@ -369,8 +334,7 @@ section{
     text-align: center;
     border: 0.1rem solid var(--text-color);
     margin-bottom: 1rem;
-    /*background-color: var(--background-color);*/ 
-    /*tu chyba nie potrzeba zmieniac tla*/
+    background-color: var(--background-color); 
     color: var(--text-color);
 }
 
@@ -385,6 +349,7 @@ section{
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+    background-color: #aaa;
 }
 
 .button {
@@ -394,8 +359,6 @@ section{
     text-align: center;
     border: 0.1rem solid var(--text-color);
     margin-bottom: 1rem;
-    /*background-color: var(--background-color);*/ 
-    /*tu chyba nie potrzeba zmieniac tla*/
     color: var(--text-color);
 }
 
