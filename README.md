@@ -8,7 +8,7 @@
 - Uses external API
 - SPA
 - cool dark-theme button
-- responsive site
+- Pretty clean HTML/CSS/JS code
 
 
 I've got good grade for it 
